@@ -1194,10 +1194,10 @@ footer {
     padding: 16px;
   }
 
-  .plan {
-  padding: 16px;
-  width: 100%;
-  max-width: 320px;
+.plan {
+  width: calc(100% - 24px);
+  max-width: 280px;
+  padding: 14px;
   margin: 0 auto;
 }
 
