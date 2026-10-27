@@ -28,6 +28,10 @@ body{
   padding: 15px;
   border-bottom: 1px solid #E5E7EB;
   border-radius: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #f9fafb;
 }
 
 .nav-text{
@@ -74,9 +78,7 @@ a:visited{
 a:hover{
   color: #0F766E;
 }
-a:active{
-  color: #115E59;
-}
+
 
 a:active{
   color: #115E59;
@@ -89,13 +91,9 @@ a:active{
   text-align: center;
 }
 
-h1{
-    color: #111827;
-}
 
-.heading p{
-    color: #115E59;
-}
+
+
 
 .pricing-container{
   display: flex;
@@ -117,20 +115,11 @@ h1{
   cursor: pointer;
 }
 
-h2{
-    color: #111827;
-}
 
-.price{
-    font-weight: 900;
-    font-size: xx-large;
-    color: #111827;
-}
 
-.month{
-    color: #6B7280;
-    font-weight: 200;
-}
+
+
+
 
 .popular{
     border: 2px solid #0D9488;
@@ -142,16 +131,13 @@ h2{
 }
 
 .basic-plan{
-    transform: translate 0.3s, box-shadow 0.2s, border-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.2s, border-color 0.3s;
 }
 
-.pro-plan{
-    background-color: #CCFBF1;
-    border: 2px solid #0D9488;
-}
+
 
 .premium-plan{
-    transform: translate 0.3s, box-shadow 0.2s, border-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.2s, border-color 0.3s;
 }
 
 .basic-plan:hover{
@@ -160,11 +146,7 @@ h2{
     box-shadow: 0 12px 24px rgba(17, 24, 39, 0.12);
 }
 
-.pro-plan:hover{
-    border-color: #0F766E;
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(13, 148, 136, 0.25);
-}
+
 
 .premium-plan:hover{
     border-color: #99F6E4;
@@ -229,23 +211,9 @@ h2{
     color: #fff;
 }
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px;
-    border-top: 1px solid #E5E7EB;
-    border-radius: 5px;
-    margin-top: auto;
-}
 
-.footer-nav{
-    display: flex;
-    gap: 30px;
-}
+
+
 
 
 /* features css below*/
@@ -274,14 +242,10 @@ h1{
     border: 2px solid #E5E7EB;
     border-radius: 15px;
     cursor: pointer;
-    transform: translate(0.5ms), box-shadow 0.3s, border-color 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.2s;
 }
 
-h2{
-    font-weight: 900;
-    color: #111827;
-    font-size: x-large;
-}
+
 
 .features-card p{
     font-weight: 200;
@@ -418,23 +382,9 @@ h3{
     color: #fff;
 }
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px;
-    border-top: 1px solid #E5E7EB;
-    border-radius: 5px;
-    margin-top: auto;
-}
 
-.footer-nav{
-    display: flex;
-    gap: 30px;
-}
+
+
 
 /*faq css*/
 
@@ -510,9 +460,10 @@ footer{
     
 }
 
-h2{
+h2 {
     color: #115E59;
     font-weight: 900;
+    font-size: x-large;
 }
 
 .enquiries p{
@@ -542,23 +493,9 @@ h2{
     color: #fff;
 }
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px;
-    border-top: 1px solid #E5E7EB;
-    border-radius: 5px;
-    margin-top: auto;
-}
 
-.footer-nav{
-    display: flex;
-    gap: 30px;
-}
+
+
 
 /*home css*/
 
@@ -598,7 +535,7 @@ footer{
     padding: 12px 28px; 
     cursor: pointer;
     font-weight: 500;
-    transition: background-color 0.2s border-color 0.2s color 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     margin-top: 10px;
 }
 
@@ -617,7 +554,7 @@ footer{
     padding: 12px 28px;
     cursor: pointer;
     font-weight: 500;
-    transition: background-color 0.2s border-color 0.2s color 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     margin-top: 10px;
 }
 
@@ -732,11 +669,11 @@ h4{
 }
 
 .free-plan{
-    transform: translate 0.3s, box-shadow 0.2s, border-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.2s, border-color 0.3s;
 }
 
 .team-plan{
-    transform: translate 0.3s, box-shadow 0.2s, border-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.2s, border-color 0.3s;
 }
 
 .free-plan:hover{
@@ -763,7 +700,7 @@ h4{
     margin-top: 30px;
     border-bottom: 2px solid #CCFBF1;
     color: #0F766E;
-    transition: color 0.2s border-color 0.2s;
+    transition: color 0.2s, border-color 0.2s;
 }
 
 .plan-link:hover{
@@ -810,38 +747,12 @@ h4{
     color: #fff;
 }
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px;
-    border-top: 1px solid #E5E7EB;
-    border-radius: 5px;
-    margin-top: auto;
-}
 
-.footer-nav{
-    display: flex;
-    gap: 30px;
-}
+
+
 
 /*privacy css*/
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 48px;
-    margin: 0 auto;
-    max-width: 1100px;
-    padding: 56px 24px;
-    flex-wrap: wrap;
-    background-color: #fff;
-    border: 1px solid #E5E7EB;
-    border-radius: 15px;
-}
+
 
 .privacy-policies{
     max-width: 720px;
@@ -882,23 +793,9 @@ main{
     color: #115E59;
 }
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px;
-    border-top: 1px solid #E5E7EB;
-    border-radius: 5px;
-    margin-top: auto;
-}
 
-.footer-nav{
-    display: flex;
-    gap: 30px;
-}
+
+
 
 /*terms css*/
 main{
@@ -954,23 +851,9 @@ main{
     color: #115E59;
 }
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px;
-    border-top: 1px solid #E5E7EB;
-    border-radius: 5px;
-    margin-top: auto;
-}
 
-.footer-nav{
-    display: flex;
-    gap: 30px;
-}
+
+
 
 .sign-up-container{
     display: flex;
@@ -1097,6 +980,7 @@ footer {
   margin: auto auto 0;
   padding: 24px 15px;
   border-top: 1px solid #E5E7EB;
+  border-radius: 5px;
 }
 
 .legal-page footer {
@@ -1139,18 +1023,15 @@ footer {
 
   .choices,
   .plan-type,
-  .pricing-container,
-  .feature-grid {
+  .feature-grid,
+  .features-grid {
     flex-direction: column;
     align-items: stretch;
   }
 
   .choice-1,
   .choice-2,
-  .choice-3,
-  .plan,
-  .pricing-card,
-  .features-card {
+  .choice-3 {
     width: 100%;
     max-width: none;
     min-width: 0;
@@ -1165,15 +1046,38 @@ footer {
   margin-top: 0;
 }
   
-  .plan-wrapper {
+  .plan {
+    width: calc(100% - 24px);
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 14px;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .pricing-card {
     width: 100%;
+    min-width: 0;
+    max-width: 360px;
+    margin: 0;
   }
 
   .features-card {
     flex-basis: auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
   }
 
-  footer {
+  .plan-wrapper {
+    width: 100%;
+  }
+
+footer {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
@@ -1194,27 +1098,7 @@ footer {
     padding: 16px;
   }
 
-.plan {
-  width: calc(100% - 24px);
-  max-width: 280px;
-  padding: 14px;
-  margin: 0 auto;
-}
-
-  .pricing-container {
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.pricing-card {
-  width: 100%;
-  max-width: 360px;
-  min-width: 0;
-  margin: 0;
-}
-
-  .features-card h2 {
+.features-card h2 {
   margin-bottom: 8px;
 }
 
